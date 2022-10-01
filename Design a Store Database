@@ -1,0 +1,30 @@
+--Create a store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, clothing TEXT, aisle INTEGER, price INTEGER, season TEXT);
+INSERT INTO clothing VALUES (1, "jeans", 1, 14.99, "year-round");
+INSERT INTO clothing VALUES (2, "socks", 2, 4.99, "year-round");
+INSERT INTO clothing VALUES (3, "shorts", 1, 9.99, "summer");
+INSERT INTO clothing VALUES (4, "hoodies", 3, 29.99, "winter");
+INSERT INTO clothing VALUES (5, "long sleeve shirts", 4, 24.99, "winter");
+INSERT INTO clothing VALUES (6, "short sleeve shirts", 4, 19.99, "summer");
+INSERT INTO clothing VALUES (7, "windbreakers", 3, 29.99, "winter");
+INSERT INTO clothing VALUES (8, "rain jackets", 3, 29.99, "year-round");
+INSERT INTO clothing VALUES (9, "belts", 2, 12.99, "year-round");
+INSERT INTO clothing VALUES (10, "sweatpants", 1, 19.19, "winter");
+INSERT INTO clothing VALUES (11, "sandals", 5, 14.99, "summer");
+INSERT INTO clothing VALUES (12, "tennis shoes", 5, 49.99, "year-round");
+INSERT INTO clothing VALUES (13, "swim shorts", 1, 11.99, "summer");
+INSERT INTO clothing VALUES (14, "sunglasses", 2, 9.99, "summer");
+INSERT INTO clothing VALUES (15, "scarves", 3, 9.99, "winter");
+
+display the database ordered by price.
+SELECT * FROM clothing ORDER BY price;
+
+display the database ordered by aisle.
+SELECT * FROM clothing ORDER BY aisle;
+
+display the database ordered by season.
+SELECT * FROM clothing ORDER BY season;
+
+what is the sum total if each item was purchased once in the store.
+SELECT SUM(price) FROM clothing;
