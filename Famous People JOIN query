@@ -1,0 +1,35 @@
+CREATE TABLE actors (id INTEGER PRIMARY KEY, name TEXT, age INTEGER, city_origin TEXT);
+
+INSERT INTO actors (name, age, city_origin)
+    VALUES ( "Chris Pratt", "43", "Virginia" );
+INSERT INTO actors (name, age, city_origin)
+    VALUES ( "Keanu Reeves", "58", "Beirut");
+INSERT INTO actors (name, age, city_origin)
+    VALUES ( "Sigourney Weaver", "73", "Manhattan");
+
+
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, actors_id INTEGER, released INTEGER, gross_revenue INTEGER);
+
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "Jurassic World", "1",  "2015", "1,670,200,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "Gaurdians of the Galaxy", "1", "2014", "7,733,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "Passangers", "1", "2016", "303,100,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "John Wick", "2", "2014", "8,600,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "The Matrix", "2", "1999", "467,200,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "Constantine", "2", "2005", "230,900,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ("Alien", "3", "1979", "184,700,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ("Avatar", "3", "2009", "2,900,000,000");
+INSERT INTO movies (title, actors_id, released, gross_revenue)
+    VALUES ( "Ghostbusters", "3", "1984", "295,200,000");
+
+SELECT name, title FROM actors
+JOIN movies
+ON actors.id=movies.actors_id;
