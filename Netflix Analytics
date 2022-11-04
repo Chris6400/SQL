@@ -26,5 +26,5 @@ where titles.title='Bright Star'
 select title, release_year
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE type='Movie'
-ORDER BY release_year asc
+ORDER BY release_year asc 
 LIMIT 1;
